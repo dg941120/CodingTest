@@ -1,4 +1,4 @@
-**출처** : <a href="https://www.acmicpc.net/problem/2557" style="color: blue; text-decoration: underline;">Softeer</a><br>
+**출처** : <a href="https://www.acmicpc.net/problem/2557" style="color: blue; text-decoration: underline;">BaekJoon</a><br>
 **언어 : <mark>JAVA**</mark><br>
 **문제** : Hello World!를 출력하시오.<br>
 
