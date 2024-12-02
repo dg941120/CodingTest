@@ -8,6 +8,7 @@
 
 **출력** : 각 테스트 케이스마다 "Case #x: "를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.<br>
 
+**#Case1 . 일반적으로 Scanner 사용법**
 ```
 import java.util.Scanner;
  
@@ -29,3 +30,66 @@ public class Main {
 	}
 }
 ```
+
+**#Case2 . 배열에 저장해서 구하기**
+```
+import java.util.Scanner;
+
+public class App {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+
+        int[][] testCases = new int[t][2]; 
+
+        for (int i = 0; i < t; i++) {
+            testCases[i][0] = sc.nextInt(); 
+            testCases[i][1] = sc.nextInt(); 
+        }
+
+        for (int i = 0; i < t; i++) {
+            int A = testCases[i][0];
+            int B = testCases[i][1];
+            int C = A + B;
+            System.out.println("Case #" + (i + 1) + ": "+ C);
+        }
+
+        sc.close(); 
+    }
+}
+```
+
+크게 시간차이는 나지않앗음
+
+**#Case3 . BufferedReader 사용**
+
+```
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+import java.io.IOException;
+ 
+public class App {
+	public static void main(String args[]) throws IOException {
+ 
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		
+		int a = Integer.parseInt(br.readLine());
+ 
+		StringTokenizer st;
+		for (int i = 1; i <= a; i++) {
+			st = new StringTokenizer(br.readLine()," ");
+			System.out.println("Case #" + i + ": " 
+			+(Integer.parseInt(st.nextToken())
+			+Integer.parseInt(st.nextToken())));
+		}
+		br.close();
+	}
+ 
+}
+```
+
+실행시간이 204 -> 128ms로 줄어듬.
+메모리 역시 18000kb -> 16000대로 줄어들었음
