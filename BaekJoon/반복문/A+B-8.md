@@ -52,7 +52,7 @@ import java.util.Scanner;
 				int B = sc.nextInt();
 				int C = A + B;
 
-				System.out.println("Case #" + i + ":" + A +"+"+ B +"="+C);
+				System.out.println("Case #" + i + ": " + A +" + "+ B +" = "+C);
 			}
 	}
 }
