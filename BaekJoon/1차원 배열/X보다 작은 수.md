@@ -36,7 +36,6 @@ public class App {
         // 종료
         sc.close();
 
-
     }
 }
 
